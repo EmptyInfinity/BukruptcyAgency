@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'Matilda';
+    src: url('fonts/11349.ttf');
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('fonts/11964.otf');
+}
+
+body {
+    font-family: 'Matilda', sans-serif;
+    min-width: 320px;
+    background: #f2f2f2;
+}
+
+#menu_toggle {
+    display: none;
+    font: 300 25px 'Matilda', sans-serif;
+    border-bottom: 1px solid #665CAC;
+    color: #fff;
+    cursor: pointer;
+    max-width: 100px;
+    margin: -10px auto 10px auto;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.marg {
+    margin-top: 200px;
+    transition: all .5s linear;
+}
+
+.block {
+    display: block;
+    opacity: 1;
+    animation: in .4s linear;
+}
+
+@keyframes in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.news .owl-carousel {
+    cursor: pointer;
+    background: #665CAC;
+    box-shadow: 0 0 5px 1px #665CAC;
+    z-index: 100;
+}
+
+.news .owl-carousel div p {
+    color: #fff;
+    padding: 5px 10px;
+    font: 300 17px 'Light', sans-serif;
+}
+
+ul li a {
+    box-shadow: 0 0 5px 1px #665CAC;
+}
+
+.menu_wrap.h-fixed ul li a,
+.menu_wrap.h-fixed #menu_toggle,
+.menu_wrap.h-fixed ul li i,
+.menu_wrap.h-fixed ul li span {
+    transition: all .2s ease;
+}
+
+.h-fixed {
+    margin-bottom: 150px;
+    top: 0;
+    position: fixed !important;
+    animation: pos .2s ease;
+    /* background: #f4f4f4 !important; */
+    transition: all .2s ease;
+}
+
+@keyframes pos {
+    from {
+        top: 54px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.menu_wrap {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+    transition: all 1s ease;
+}
+
+.menu {
+    padding-top: 10px;
+    width: 85vw;
+    margin: auto;
+    max-width: 1240px;
+}
+
+.logo {
+    width: 120px;
+}
+
+ul {
+    font: 300 22px 'Matilda', sans-serif;
+    float: right;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+ul li {
+    margin: 5px;
+    padding: 5px;
+    list-style: none;
+}
+
+ul li a {
+    transition: all .4s linear;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    display: block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: 0.5s;
+    overflow: hidden;
+    border: 1px solid #665CAC;
+    font-size: 30px;
+}
+
+
+ul li a:hover {
+    transition: all .3s;
+    color: #000;
+    background: #665CAC;
+}
+
+ul li i {
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 18px;
+    cursor: default;
+}
+
+ul li span {
+    font: 300 30px 'Matilda', sans-serif;
+    color: #fff;
+    text-shadow: 1px 1px 5px #fff;
+}
+
+ul li i:hover {
+    color: #fff;
+}
+
+
+.wrap2 {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.slides-wrap {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.slide {
+    position: relative;
+    margin: 30px 0 40px 0;
+    text-align: center;
+    border: 1px solid #665CAC;
+    background: rgba(204, 204, 204, 0.8);
+    height: 165px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px #665CAC;
+}
+
+img {
+    user-select: none;
+}
+
+.slide img {
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    transition: .3s;
+}
+
+.sl-active img {
+    width: 110px;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.elipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    height: 78px;
+    margin: auto;
+}
+
+.show-more {
+    color: #3034b1;
+    padding: 5px 0 10px 0;
+    font-size: 17px;
+}
+
+.elipsis.active {
+    height: auto;
+}
+
+.slide i {
+    transition: .3s;
+    margin: 10px 0 0 0;
+    transition: .35s;
+    padding-bottom: 0px;
+}
+
+.sl {
+    transition: .3s;
+    border: 0;
+    height: 2px;
+    background: #fec222;
+    opacity: 0;
+    width: 30%;
+    margin: 10px auto 10px auto;
+}
+
+.sl-active {
+    background: #665CAC;
+    /* background: rgb(254, 194, 34, 0.8); */
+    transition: .3s;
+}
+
+.sl-active i {
+    margin-top: -26px;
+    padding-bottom: 25px;
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.slide-descr {
+    font-size: 29px;
+}
+
+.sl-active .slide-descr {
+    color: #fff;
+}
+
+.sl-active .slide_p {
+    margin-top: 45px;
+    font-size: 47px;
+    transition: .3s;
+    color: #fff;
+}
+
+.slide_p {
+    font-size: 45px;
+    font-weight: 500;
+    margin: 55px 0 0px 0;
+}
+
+.add-hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(100, 91, 175, 0), rgba(100, 91, 175, 0.75), rgba(100, 91, 175, 0));
+    margin: 10px auto 8px auto;
+}
+
+.sl-active .sl {
+    width: 80%;
+    opacity: 1;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.ad_info_wrap {
+    position: relative;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.ad_info {
+    margin: auto;
+    width: 80%;
+    max-width: 1240px;
+    border: 1px solid #665CAC;
+    background: #665CAC;
+    padding: 10px;
+}
+
+.p-circle {
+    border-radius: 50%;
+    border: 1px solid #cdcccd;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    text-align: center;
+    margin: 13px 0 0 4px;
+    font-size: 14px !important;
+}
+
+.ad_info div {
+    box-sizing: border-box;
+    font: 300 16px 'Light', sans-serif;
+    color: #fff;
+    /* line-height: 23px; */
+}
+
+
+.map-wrap {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.ad_info_wrap.mobile {
+    display: none;
+}
+
+.ad_info_wrap.desktop {
+    display: block;
+}
+
+.black {
+    color: #000;
+}
+
+.preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: url(https://kyivstore.com/wp-content/uploads/2016/09/loading.gif) center no-repeat #fff;
+    text-align: center;
+}
