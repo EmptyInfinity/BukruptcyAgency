@@ -18,6 +18,10 @@ let conf = {
             },
         ]
     },
+    node: {
+        fs: "empty",
+        net: 'empty',
+    }
 };
 
 module.exports = (env, options) => {
