@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Matilda';
-    src: url('fonts/11349.ttf');
+    src: url('../fonts/11349.ttf');
 }
 
 @font-face {
     font-family: 'Light';
-    src: url('fonts/11964.otf');
+    src: url('../fonts/11964.otf');
 }
 
 body {
@@ -24,6 +24,35 @@ body {
     margin: -10px auto 10px auto;
 }
 
+.translation {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.translation a {
+    padding: 3px;
+    border-radius: 5px;
+    transition: .2s;
+    color: #fff;
+    font: 300 20px 'Light',
+    sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.translation img{
+    margin: 5px;
+}
+
+.translation a:hover{
+    background: #fff;
+    color: #665CAC;
+}
+
 .align-center {
     text-align: center;
 }
@@ -37,6 +66,18 @@ body {
     display: block;
     opacity: 1;
     animation: in .4s linear;
+}
+
+ul li a:hover {
+    transition: all .3s;
+    color: #000;
+    background: #665CAC;
+}
+
+ul li a:hover i {
+    transition: all .3s;
+    color: #000;
+    cursor: pointer;
 }
 
 @keyframes in {
@@ -176,6 +217,11 @@ ul li i {
     transition: .2s;
     font-size: 18px;
     cursor: default;
+}
+
+ul li i:hover {
+    color: #000;
+    cursor: pointer;
 }
 
 ul li span {
@@ -342,7 +388,7 @@ img {
     height: 23px;
     display: inline-block;
     text-align: center;
-    margin: 13px 0 0 4px;
+    margin: 13px 5px 0 4px;
     font-size: 14px !important;
 }
 

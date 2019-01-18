@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Matilda';
-  src: url('fonts/11349.ttf');
+  src: url('../fonts/11349.ttf');
 }
 
 @font-face {
   font-family: 'Light';
-  src: url('fonts/11964.otf');
+  src: url('../fonts/11964.otf');
 }
 .marg {
   margin-top: 200px;
@@ -52,6 +52,10 @@ body {
   display: block;
   opacity: 1;
   animation: in .4s linear;
+}
+
+ul li i:hover {
+  cursor: pointer;
 }
 
 @keyframes in {
@@ -119,6 +123,11 @@ ul li a:hover {
   color: #000;
   background: #665CAC;
 }
+ul li a:hover  i{
+  transition: all .3s;
+  color: #000;
+  cursor: pointer;
+}
 
 ul li i {
   color: #fff;
@@ -135,9 +144,6 @@ ul li span {
   text-shadow: 1px 1px 5px #fff;
 }
 
-ul li i:hover {
-  color: #fff;
-}
 
 .icons {
   margin: auto;
@@ -264,15 +270,6 @@ img{
   color: #f5685e;
   border: 1px solid #f5685e;
 }
-
-
-
-
-
-
-
-
-
 
 /*  adaptive */
 @media screen and (max-width:1330px) {

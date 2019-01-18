@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Matilda';
-  src: url('fonts/11349.ttf');
+  src: url('../fonts/11349.ttf');
 }
 
 @font-face {
   font-family: 'Light';
-  src: url('fonts/11964.otf');
+  src: url('../fonts/11964.otf');
 }
 
 * {
@@ -41,6 +41,18 @@ body {
   display: block;
   opacity: 1;
   animation: in .4s linear;
+}
+
+ul li a:hover {
+  transition: all .3s;
+  color: #000;
+  background: #665CAC;
+}
+
+ul li a:hover i {
+  transition: all .3s;
+  color: #000;
+  cursor: pointer;
 }
 
 @keyframes in {
