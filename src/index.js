@@ -35,7 +35,7 @@ if ($(window).width() > 680) {
                     slides[i].classList.remove('sl-active');
                 }
                 ad_info_txt.innerHTML = blocks[i];
-                // $('body').i18n();
+                $('body').i18n();
                 slides[i].classList.add('sl-active');
             }
         }
