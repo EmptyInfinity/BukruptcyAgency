@@ -11,7 +11,7 @@
   <meta name="description" content="Контактная информация, адреса, как доехать">
   <meta name="keywords" content="офисный центр SILVER BREEZE, 0667779606, 0957982992, bankruptcy.ag@gmail.com, проспект Павла Тычыны, 1в, Киев, Агенство банкротства">
   <link rel="stylesheet" href="dist/css/contacts.css">
-<link rel="shortcut icon" href="dist/imgs/logo-small.png" type="image/png">
+  <link rel="shortcut icon" href="dist/imgs/logo-small.png" type="image/png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -25,13 +25,23 @@
         <img src="dist/imgs/logo-small.png" alt="" class="logo">
         <span id="menu_toggle">Меню</span>
         <ul id="menu_ul">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="team.html">Команда/Наши кейсы</a></li>
+          <li><a href="index.html" data-i18n="main">Главная</a></li>
+          <li><a href="team.html" data-i18n="team-cases">Команда/Наши кейсы</a></li>
           <li class="li-border"><a href="tell:380667779606"><i class="fas fa-phone"></i>066-777-96-06</a></li>
           <li class="li-border"><a href="mailto:bankruptcy.ag@gmail.com"><i class="fas fa-envelope"></i>bankruptcy.ag@gmail.com</a></li>
         </ul>
       </div>
     </header>
+    <div class="translation">
+      <a href="#" data-locale="ru">
+        <span>РУ</span>
+        <img src="dist/imgs/ru.png" width="20px" height="20px" alt="Русский язый">
+      </a>
+      <a href="#" data-locale="ua">
+        <span>УК</span>
+        <img src="dist/imgs/ua.png" width="20px" height="20px" alt="Українська мова">
+      </a>
+    </div>
     <div class="icons mt">
       <div class="icons_wrap">
         <a rel="noopener" alt="facebook page" href="https://facebook.com/Bankruptcy-agency-484677678716408/" target="_blank"
@@ -50,9 +60,9 @@
     <div class="map-wrap">
       <main class="map_desc">
         <div class="w-50">
-          <h1>Агенство "Bankruptcy agency"</h1>
-          <p>Офисный центр SilverBreeze</p>
-          <p>Киев, пр. Павла Тычины, 1в</p>
+          <h1 data-i18n="agency-name">Агенство "Bankruptcy agency"</h1>
+          <p data-i18n="office-center">Офисный центр SilverBreeze</p>
+          <p data-i18n="adress">Киев, пр. Павла Тычины, 1в</p>
           <p>+380953508001</p>
           <p>+380957982992</p>
           <p>+380989193159</p>
@@ -60,25 +70,39 @@
           <p>+380633639298</p>
         </div>
         <div class="w-50">
-          <p class="underline">Общественным транспортом:</p>
+          <p class="underline" data-i18n="social-transport">Общественным транспортом:</p>
           <p>
-            - от <span class="metro r">м</span> Левобережная
-            автобусами № 95, 63, 49, 108
-            маршрутными микроавтобусами № 178, 245, 249
+            - <span data-i18n="from">от</span> <span class="metro r">м</span> <span data-i18n="from-red">Левобережная
+              автобусами № 95, 63, 49, 108
+              маршрутными микроавтобусами № 178, 245, 249</span>
           </p>
           <p>
-            - от <span class="metro g">м</span> Дружбы народов
-            автобусом № 51
-            троллейбусом № 43
-            маршрутными микроавтобусами № 205, 211, 416, 172, 527, 422, 523, 590
+            - <span data-i18n="from">от</span> <span class="metro g">м</span> <span data-i18n="from-green">Дружбы
+              народов
+              автобусом № 51
+              троллейбусом № 43
+              маршрутными микроавтобусами № 205, 211, 416, 172, 527, 422, 523, 590</span>
           </p>
         </div>
       </main>
       <div id="mapid"></div>
     </div>
   </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
     crossorigin=""></script>
+  <script src="dist/translation/js/lib/CLDRPluralRuleParser/CLDRPluralRuleParser.js"></script>
+  <script src="dist/translation/js/lib/jquery.i18n/jquery.i18n.js"></script>
+  <script src="dist/translation/js/lib/jquery.i18n/jquery.i18n.messagestore.js"></script>
+  <script src="dist/translation/js/lib/jquery.i18n/jquery.i18n.fallbacks.js"></script>
+  <script src="dist/translation/js/lib/jquery.i18n/jquery.i18n.language.js"></script>
+  <script src="dist/translation/js/lib/jquery.i18n/jquery.i18n.parser.js"></script>
+  <script src="dist/translation/js/lib/jquery.i18n/jquery.i18n.emitter.js"></script>
+  <script src="dist/translation/js/lib/jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
+  <script src="dist/translation/js/lib/history/jquery.history.js"></script>
+  <script src="dist/translation/js/lib/url/url.min.js"></script>
+  <script src="dist/translation/js/global.js"></script>
   <script src="dist/js/contacts.js"></script>
   <script type="text/javascript" src="dist/jquery.particleground.min.js"></script>
 </body>

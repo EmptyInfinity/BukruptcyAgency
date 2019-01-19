@@ -68,11 +68,6 @@ body {
     animation: in .4s linear;
 }
 
-ul li a:hover {
-    transition: all .3s;
-    color: #000;
-    background: #665CAC;
-}
 
 ul li a:hover i {
     transition: all .3s;

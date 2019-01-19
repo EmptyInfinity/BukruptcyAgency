@@ -83,6 +83,36 @@ ul li i:hover {
   max-width: 1240px;
 }
 
+.translation {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.translation a {
+  padding: 3px;
+  border-radius: 5px;
+  transition: .2s;
+  color: #fff;
+  font: 300 20px 'Light',
+    sans-serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.translation img {
+  margin: 5px;
+}
+
+.translation a:hover {
+  background: #fff;
+  color: #665CAC;
+}
+
 .logo {
   width: 120px;
 }
