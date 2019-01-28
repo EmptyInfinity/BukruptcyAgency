@@ -12,6 +12,15 @@
   transition: all .5s linear;
 }
 
+.email a{
+  color: #000;
+  text-decoration: none;
+}
+.email a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
 .page-wrap {
   position: absolute;
   top: 0;
